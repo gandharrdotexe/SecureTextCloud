@@ -11,7 +11,7 @@ import { Copy, Check, AlertCircle } from "lucide-react"
 import { encryptMessage } from "@/lib/crypto-service"
 import { useToast } from "@/hooks/use-toast"
 
-const API_BASE_URL = "http://localhost:5000"
+const API_BASE_URL = "http://localhost:5003"
 
 export default function MessageEncryptor() {
   const [message, setMessage] = useState("")
@@ -39,17 +39,18 @@ export default function MessageEncryptor() {
 
       const encryptedData = await encryptMessage(message, secretKey)
 
-      const response = await axios.post(`${API_BASE_URL}/storeMessage`, {
+      const response = await axios.post(`${API_BASE_URL}/api/messages`, {
         encryptedMessage: encryptedData.encryptedMessage,
         iv: encryptedData.iv,
         salt: encryptedData.salt,
       })
 
-      setMessageId(response.data.id)
+      setMessageId(response.data.messageId)
       toast({
         title: "Message encrypted and stored",
         description: "Share the message ID with the recipient",
       })
+      console.log("Message ID:", response.data.messageId);
     } catch (err) {
       console.error("Error encrypting or sending message:", err)
       setError("Failed to encrypt or send message. Please try again.")

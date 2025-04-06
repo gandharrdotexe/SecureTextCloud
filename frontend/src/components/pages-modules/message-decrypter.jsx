@@ -10,7 +10,7 @@ import { AlertCircle } from "lucide-react"
 import { decryptMessage } from "@/lib/crypto-service"
 import { useToast } from "@/hooks/use-toast"
 
-const API_BASE_URL = "http://localhost:5000"
+const API_BASE_URL = "http://localhost:5003"
 
 export default function MessageDecryptor() {
   const [messageId, setMessageId] = useState("")
@@ -34,7 +34,7 @@ export default function MessageDecryptor() {
       setEncryptedMessage(null)
       setDecryptedMessage(null)
 
-      const response = await axios.get(`${API_BASE_URL}/getMessage/${messageId}`)
+      const response = await axios.get(`${API_BASE_URL}/api/messages/${messageId}`)
 
       if (response.data) {
         setEncryptedMessage({

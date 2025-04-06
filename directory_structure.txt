@@ -1,0 +1,39 @@
+/Users/mithra707/Desktop/securetextcloud/frontend
+├── README.md
+├── components.json
+├── eslint.config.js
+├── index.html
+├── jsconfig.json
+├── package-lock.json
+├── package.json
+├── postcss.config.js
+├── tailwind.config.js
+├── vite.config.js
+├── public
+│   └── vite.svg
+└── src
+    ├── App.css
+    ├── App.jsx
+    ├── index.css
+    ├── main.jsx
+    ├── assets
+    │   └── react.svg
+    ├── components
+    │   ├── message-encrypter.jsx.txt
+    │   ├── pages-modules
+    │   │   ├── message-decrypter.jsx
+    │   │   └── message-encrypter.jsx
+    │   └── ui
+    │       ├── alert.jsx
+    │       ├── button.jsx
+    │       ├── card.jsx
+    │       ├── input.jsx
+    │       ├── tabs.jsx
+    │       ├── textarea.jsx
+    │       ├── toast.jsx
+    │       └── toaster.jsx
+    ├── hooks
+    │   └── use-toast.js
+    └── lib
+        ├── crypto-service.js
+        └── utils.js
