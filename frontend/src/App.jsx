@@ -121,15 +121,7 @@ export default function App() {
           </Tabs>
         </div>
 
-        <Button 
-          onClick={() => toast({
-            title: "Test Toast",
-            description: "This is a test toast notification",
-          })}
-          className="mt-4"
-        >
-          Test Toast
-        </Button>
+        
       </main>
       
       {/* Add Toaster at the root level */}
