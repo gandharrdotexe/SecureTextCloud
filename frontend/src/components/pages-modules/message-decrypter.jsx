@@ -10,7 +10,8 @@ import { AlertCircle } from "lucide-react"
 import { decryptMessage } from "@/lib/crypto-service"
 import { useToast } from "@/hooks/use-toast"
 
-const API_BASE_URL = "http://16.171.250.242:5003"
+
+const API_BASE_URL = "http://13.51.146.20:5003"
 
 export default function MessageDecryptor() {
   const [messageId, setMessageId] = useState("")

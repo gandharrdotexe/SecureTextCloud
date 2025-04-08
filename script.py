@@ -65,7 +65,7 @@ def write_js_files_contents(root_dir, file):
 
        
         for entry in files:
-            if entry.endswith((".js" , ".hbs")):
+            if entry.endswith((".jsx" )):
                 path = os.path.join(current_dir, entry)
                
                 relative_path = os.path.relpath(path, root_dir)
